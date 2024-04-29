@@ -7,10 +7,14 @@ import 'package:student/registration.dart';
 import 'package:student/splash.dart';
 void main()async
 {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MaterialApp(home: Reg())
+
+
+  runApp(MaterialApp(home: Splash())
 
   );
 }

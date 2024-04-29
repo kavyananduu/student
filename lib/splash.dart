@@ -1,9 +1,22 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-class Splash extends StatelessWidget {
-   Splash({super.key});
+import 'package:student/login.dart';
+class Splash extends StatefulWidget {
+  Splash({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  State<Splash> createState() => _SplState();
+}
+class _SplState extends State<Splash>{
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 5),() {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) =>
+          Login()));
+    });
+    }
+        Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.orange,
 
